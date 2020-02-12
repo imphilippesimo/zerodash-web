@@ -1,0 +1,56 @@
+@import "variables.scss";
+
+.pink-container {
+  width: 100%;
+  background: $main;
+  background-image: radial-gradient(circle at top left, $main 40%, $accent);
+  color: white;
+  margin-top: 15%;
+  padding: 4em 0 2em;
+  border-top-left-radius: 40px;
+  transform: skewY(-2deg);
+}
+
+.pink-container:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: $main;
+  position: absolute;
+  top: -39px;
+  right: 0;
+  z-index: -2;
+}
+
+.pink-container:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  border-radius: 50%;
+  z-index: -1;
+}
+.container {
+  text-align: center;
+  padding: 0.8em 1.2em;
+  transform: skewY(2deg);
+}
+
+.cta-container {
+  width: 100%;
+  list-style-type: none;
+  margin-top: 2em;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-phone-screen {
+  width: 50%;
+  margin-top: 1em;
+}
+

@@ -12,7 +12,7 @@ import * as fromComponents from './components';
     FormsModule
   ],
   exports: [
-    FormsModule, ...fromComponents.components
+    FormsModule, CommonModule, ...fromComponents.components
   ]
 })
 export class SharedModule { }

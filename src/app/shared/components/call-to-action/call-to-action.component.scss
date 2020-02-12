@@ -1,5 +1,29 @@
-@import 'variables.scss';
+@import "variables.scss";
 
-button {
-    background: $accent;
+div {    
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: .8em;
+  padding: .5em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 4;   
+  p {
+      margin: 0 0 .3em 0;
+  }
+ 
+  img {
+      width: 10px;
+      margin-left: 1em;
+  }
+}
+
+.plain {
+  background: $accent;
+}
+.empty {
+  background: none;
+  border: 3px solid #fff;
 }

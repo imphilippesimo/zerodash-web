@@ -10,6 +10,12 @@
           "style": "scss"
         }
       },
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr": "src/locale/messages.fr.xlf"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -23,6 +29,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
+            "localize": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -65,6 +72,12 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "fr": {
+              "localize": ["fr"]            
+            },
+            "en": {
+              "localize": ["en-US"]            
             }
           }
         },
@@ -76,6 +89,12 @@
           "configurations": {
             "production": {
               "browserTarget": "zerodash-web:build:production"
+            },
+            "fr": {
+              "browserTarget": "zerodash-web:build:fr"
+            },
+            "en": {
+              "browserTarget": "zerodash-web:build:en"
             }
           }
         },
@@ -99,6 +118,11 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           }
         },

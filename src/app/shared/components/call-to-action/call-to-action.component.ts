@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-call-to-action',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CallToActionComponent implements OnInit {
 
+  @Input() icon: string;
+  @Input() label: string;
+  @Input() type: string;
+  @Output() onClick = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClickButton(event) {
+    this.onClick.emit(event);
   }
 
 }

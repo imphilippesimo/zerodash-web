@@ -25,11 +25,10 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.title).toEqual('zerodash-web');
   });
-
-  it('should render title', () => {
+  it('should render main title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('zerodash-web app is running!');
+    expect(compiled.querySelector('.pink-container h1').textContent).toContain('Take control over your Mobile Money with ZERODASH');
   });
 });

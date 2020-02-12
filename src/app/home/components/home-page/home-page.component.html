@@ -1,0 +1,24 @@
+<app-nav></app-nav>
+<div class="pink-container">
+    <div class="container">
+        <h1 i18n="@@appMainTitle">Take control over your Mobile Money with ZERODASH</h1>
+        <p class="subhead" i18n="@@appMainSubtitle">Take advantage of a rich and intuitive dashboard to easily control
+            what
+            you spend, how much you
+            spend and why. It's all in one place</p>
+        <img src="assets/img/screen_home.svg" alt="home feature screenshot" class="main-phone-screen">
+        <img src="assets/img/scroll.svg" alt="scroll down" class="scroll hide-on-mobile show-on-desktop">
+        <ul class="cta-container hide-on-desktop">
+            <li>
+                <app-call-to-action i18n="@@ctaGetTheApp" (onClick)="functioncall($event)" [label]="'Get the App'"
+                    [type]="'empty'" [icon]="'android'">
+                </app-call-to-action>
+            </li>
+            <li>
+                <app-call-to-action i18n="@@ctaGetTheApp" (onClick)="functioncall($event)" [label]="'Get the App'"
+                    [type]="'empty'" [icon]="'apple'">
+                </app-call-to-action>
+            </li>
+        </ul>
+    </div>
+</div>

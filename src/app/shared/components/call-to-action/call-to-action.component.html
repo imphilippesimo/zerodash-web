@@ -1,1 +1,9 @@
-<p>call-to-action works!</p>
+<div (click)="onClickButton($event)" [ngClass]="type=='plain'?'plain':'empty'">
+    <p>{{label}}</p>
+    <ng-template [ngIf]="icon==='android'" [ngIfElse]="apple">
+        <img src="assets/img/google_play.svg" alt="google play">
+    </ng-template>
+    <ng-template #apple>
+        <img src="assets/img/apple_store.svg" alt="apple store">
+    </ng-template>
+</div>
